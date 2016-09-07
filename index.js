@@ -5,14 +5,9 @@ const throttle = require('lodash.throttle');
 
 // Syntax scheme
 const backgroundColor = '#293341';
-const tabColor = '#626978';
-const tabsBackgroundColor = '#232C37';
-const tabsBorderColor = '#354253';
 const foregroundColor = '#CDD2E9';
 const cursorColor = '#2C85F7';
 const borderColor = backgroundColor;
-const selectionColor = '#9198A2';
-const activityColor = '#FFB68E';
 const fontSize = 12;
 const colors = {
     black           : backgroundColor,
@@ -46,7 +41,7 @@ exports.decorateConfig = config => {
         termCSS: `
             ${config.termCSS || ''}
             ::selection {
-                background: ${selectionColor} !important;
+                background: #9198A2 !important;
             }
             .cursor-node[focus=false] {
                 width: 3px !important;
@@ -59,11 +54,14 @@ exports.decorateConfig = config => {
                     opacity: 0;
                 }
             }
+            span {
+                font-weight: normal !important;
+            }
         `,
         css: `
             ${config.css || ''}
             ::selection {
-                background: ${selectionColor} !important;
+                background: #9198A2 !important;
             }
             .notifications_view {
                 display: none !important;
@@ -74,32 +72,32 @@ exports.decorateConfig = config => {
                 left: 0;
             }
             .tabs_list {
-                background-color: ${tabsBackgroundColor};
-                border-bottom-color: ${tabsBorderColor} !important;
+                background-color: #232C37;
+                border-bottom-color: #354253 !important;
             }
             .tab_first {
                 margin-left: -1px;
                 border: 0 !important;
             }
             .tab_tab {
-                color: ${tabColor};
+                color: #626978;
                 transition: background 150ms ease;
             }
             .tab_tab:hover {
                 color: #FFFFFF;
-                background-color: ${tabsBorderColor};
+                background-color: #354253;
             }
             .tab_tab.tab_active {
                 color: #FFFFFF;
                 font-weight: 400;
                 background-color: ${backgroundColor};
-                border-color: ${tabsBorderColor} !important;
+                border-color: #354253 !important;
             }
             .tab_tab.tab_active::before {
                 border-bottom-color: ${backgroundColor};
             }
             .tab_tab.tab_hasActivity {
-                color: ${activityColor};
+                color: #FFB68E;
                 animation: pulse 3s ease-in-out infinite;
             }
             .tab_tab.tab_hasActivity:hover {
@@ -129,13 +127,13 @@ exports.decorateConfig = config => {
                 transition: transform 150ms ease, background 150ms ease;
             }
             .tab_icon:hover {
-                background-color: ${tabsBackgroundColor};
+                background-color: #232C37;
             }
             .tab_tab:hover .tab_icon {
                 transform: scale(1);
             }
             .tab_tab.tab_active .tab_icon:hover {
-                background-color: ${tabsBorderColor};
+                background-color: #3B495C;
             }
             .tab_icon::before {
                 content: '';
@@ -150,10 +148,10 @@ exports.decorateConfig = config => {
                 transition: background 150ms ease;
             }
             .tab_tab.tab_hasActivity .tab_icon::before {
-                background-color: ${activityColor};
+                background-color: #FFB68E;
             }
             .tab_tab.tab_hasActivity .tab_icon:hover {
-                background-color: ${activityColor};
+                background-color: #FFB68E;
             }
             .tab_tab.tab_hasActivity .tab_icon:hover::before {
                 background-color: #FFFFFF;
@@ -177,7 +175,7 @@ exports.decorateConfig = config => {
                 left: 0;
                 width: 14px;
                 height: 100%;
-                background-color: ${tabColor};
+                background-color: #626978;
                 -webkit-mask-repeat: no-repeat;
                 -webkit-mask-position: left center;
                 transition: background 150ms ease;
@@ -209,7 +207,7 @@ exports.decorateConfig = config => {
                 background-color: #FFFFFF;
             }
             .tab_tab.tab_hasActivity .tab_service::before {
-                background-color: ${activityColor};
+                background-color: #FFB68E;
             }
             .terms_terms {
                 padding: 12px 14px 42px !important;
