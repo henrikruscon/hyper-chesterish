@@ -43,6 +43,9 @@ exports.decorateConfig = config => {
             ::selection {
                 background: #9198A2 !important;
             }
+            .cursor-node {
+                background-color: transparent !important;
+            }
             .cursor-node[focus=false] {
                 width: 3px !important;
             }
@@ -203,7 +206,7 @@ exports.decorateConfig = config => {
                 -webkit-mask-image: url('${__dirname}/icons/vim.svg');
                 -webkit-mask-size: 12px 11px;
             }
-            .tab_service.tab_title::before, .tab_tab.tab_active .tab_service::before, .tab_tab:hover .tab_service::before {
+            .tabs_title .tab_service::before, .tab_tab.tab_active .tab_service::before, .tab_tab:hover .tab_service::before {
                 background-color: #FFFFFF;
             }
             .tab_tab.tab_hasActivity .tab_service::before {
@@ -295,7 +298,7 @@ exports.decorateTabs = (Tabs, { React }) => {
         render() {
             if (this.props.tabs.length === 1 && typeof this.props.tabs[0].title === 'string') {
                 const icon = getService(this.props.tabs[0].title);
-                this.props.tabs[0].title = React.createElement('span', { className: `tab_service tab_title tab_${icon}` }, this.props.tabs[0].title);
+                this.props.tabs[0].title = React.createElement('span', { className: `tab_service tab_${icon}` }, this.props.tabs[0].title);
             }
             return React.createElement(Tabs, Object.assign({}, this.props, {}));
         };
