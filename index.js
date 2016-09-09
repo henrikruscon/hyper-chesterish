@@ -8,7 +8,6 @@ const backgroundColor = '#293341';
 const foregroundColor = '#CDD2E9';
 const cursorColor = '#2C85F7';
 const borderColor = backgroundColor;
-const fontSize = 12;
 const colors = {
     black           : backgroundColor,
     red             : '#E17E85',
@@ -36,7 +35,6 @@ exports.decorateConfig = config => {
         borderColor,
         cursorColor,
         colors,
-        fontSize,
         cursorShape: 'BEAM',
         termCSS: `
             ${config.termCSS || ''}
@@ -224,7 +222,7 @@ exports.decorateConfig = config => {
                 right: 0;
                 z-index: 100;
                 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-size: ${fontSize}px;
+                font-size: 12px;
                 height: 30px;
                 padding: 0 14px 1px;
                 background-color: #2F3B4A;
