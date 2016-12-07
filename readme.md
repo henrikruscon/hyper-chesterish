@@ -1,6 +1,6 @@
 # hyperterm-chesterish  [![npm](https://img.shields.io/npm/v/hyperterm-chesterish.svg?maxAge=86400?style=flat-square)](https://www.npmjs.com/package/hyperterm-chesterish) [![npm](https://img.shields.io/npm/dt/hyperterm-chesterish.svg?maxAge=86400?style=flat-square)](https://www.npmjs.com/package/hyperterm-chesterish)
 
-> Chesterish Theme for [HyperTerm](https://hyperterm.org) based on [Jupyter](https://github.com/dunovank/jupyter-themes) schemes.
+> Chesterish Theme for [Hyper](https://hyper.is) based on [Jupyter](https://github.com/dunovank/jupyter-themes) schemes.
 
 ![](screen.png)
 
@@ -9,7 +9,7 @@
 
 ## Install
 
-Add `hyperterm-chesterish` to the plugins array in your `~/.hyperterm.js` config file and full reload.
+Add `hyperterm-chesterish` to the plugins array in your `~/.hyper.js` config file and full reload.
 
 
 ## Additional
