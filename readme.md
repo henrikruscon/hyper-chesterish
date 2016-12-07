@@ -22,7 +22,6 @@ To look exactly like the screens, you also need [Pure](https://github.com/sindre
 ## Other
 
 * [hyperterm-base16-ocean-saturated](https://github.com/henrikdahl/hyperterm-base16-ocean-saturated)
-* [hyperterm-grade3](https://github.com/henrikdahl/hyperterm-grade3)
 
 
 ## License
