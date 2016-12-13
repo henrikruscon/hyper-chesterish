@@ -92,7 +92,8 @@ exports.decorateConfig = config => {
                 transition: background 150ms ease;
             }
             .tab_tab:last-child, .tab_tab.tab_active:last-child {
-                border-right-color: transparent !important;
+                border-right-width: 0 !important;
+                padding-right: 1px;
             }
             .tab_tab:hover {
                 color: #FFFFFF;
@@ -103,8 +104,8 @@ exports.decorateConfig = config => {
                 border-color: #354253 !important;
                 background-color: transparent;
             }
-            .tab_tab.tab_active:before {
-                content: "";
+            .tab_tab.tab_active::before {
+                content: '';
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -232,15 +233,15 @@ exports.decorateConfig = config => {
 };
 
 // Hide traffic buttons
-exports.decorateBrowserOptions = defaults => {
-    const clean = Object.assign({ frame: false }, defaults);
-    delete clean.titleBarStyle;
-    return clean;
-};
+exports.decorateBrowserOptions = defaults => Object.assign({}, defaults, {
+    titleBarStyle: '',
+    transparent: true,
+    frame: false
+})
 
 // Current shell service
 const getService = (title) => {
-    const service = (title.split(' ')[0] === 'gulp' || title.split(' ')[0] === 'php' || title.split(' ')[0] === 'node' || title.split(' ')[0] === 'vim') ? title : 'shell';
+    const service = (title.split(' ')[1] === 'gulp' || title.split(' ')[1] === 'php' || title.split(' ')[1] === 'node' || title.split(' ')[1] === 'vim') ? title.split(' ')[1] : 'shell';
     return service;
 };
 
@@ -330,45 +331,4 @@ exports.decorateTerm = (Term, { React }) => {
             }
         };
     };
-};
-
-let curPid;
-let curCwd;
-let uids = {};
-
-// Current shell cwd
-const setCwd = (pid) =>
-    exec(`lsof -p ${pid} | grep cwd | tr -s ' ' | cut -d ' ' -f9-`, (err, cwd) => {
-        cwd = cwd.trim();
-        curCwd = cwd;
-
-        store.dispatch({
-            type: 'SESSION_SET_CWD',
-            cwd
-        });
-});
-
-// Sessions
-exports.middleware = (store) => (next) => (action) => {
-    switch (action.type) {
-        case 'SESSION_PTY_DATA':
-            if (curPid && uids[action.uid] === curPid) setCwd(curPid);
-            break;
-        case 'SESSION_ADD':
-            uids[action.uid] = action.pid;
-            curPid = action.pid;
-            setCwd(curPid);
-            break;
-        case 'SESSION_SET_ACTIVE':
-            curPid = uids[action.uid];
-            setCwd(curPid);
-            break;
-        case 'SESSION_PTY_EXIT':
-            delete uids[action.uid];
-            break;
-        case 'SESSION_USER_EXIT':
-            delete uids[action.uid];
-            break;
-    }
-    next(action);
 };
