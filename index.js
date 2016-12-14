@@ -10,6 +10,7 @@ const cursorColor = '#2C85F7';
 const borderColor = backgroundColor;
 const colors = {
     black           : backgroundColor,
+    orange          : '#FFB68E',
     red             : '#E17E85',
     green           : '#61BA86',
     yellow          : '#FFEC8E',
@@ -146,7 +147,7 @@ exports.decorateConfig = config => {
                 display: none;
             }
             .tab_tab.tab_hasActivity .tab_text {
-                color: #FFB68E;
+                color: ${colors.orange};
                 animation: pulse 3s ease-in-out infinite;
             }
             .tab_tab.tab_hasActivity:hover .tab_text {
@@ -167,10 +168,10 @@ exports.decorateConfig = config => {
                 }
             }
             .tab_tab.tab_hasActivity .tab_icon::before {
-                background-color: #FFB68E;
+                background-color: ${colors.orange};
             }
             .tab_tab.tab_hasActivity .tab_icon:hover {
-                background-color: #FFB68E;
+                background-color: ${colors.orange};
             }
             .tab_tab.tab_hasActivity .tab_icon:hover::before {
                 background-color: #FFFFFF;
@@ -226,7 +227,7 @@ exports.decorateConfig = config => {
                 background-color: #FFFFFF;
             }
             .tab_tab.tab_hasActivity .tab_service::before {
-                background-color: #FFB68E;
+                background-color: ${colors.orange};
             }
         `
     });
