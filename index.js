@@ -36,7 +36,7 @@ exports.decorateConfig = config => {
         borderColor,
         cursorColor,
         colors,
-        cursorShape: 'BEAM',
+        cursorShape: config.cursorShape || 'BEAM',
         termCSS: `
             ${config.termCSS || ''}
             ::selection {
