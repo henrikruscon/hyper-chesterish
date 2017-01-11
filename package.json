@@ -1,20 +1,20 @@
 {
-  "name": "hyperterm-chesterish",
+  "name": "hyper-chesterish",
   "version": "1.1.4",
-  "description": "Chesterish Theme for HyperTerm",
+  "description": "Chesterish Theme for Hyper",
   "main": "index.js",
   "license": "MIT",
-  "repository": "henrikdahl/hyperterm-chesterish",
+  "repository": "henrikdahl/hyper-chesterish",
   "author": {
     "name": "Henrik Dahlheim",
     "email": "henrik.dahlheim@gmail.com"
   },
   "keywords": [
+    "hyper",
+    "hyper-theme",
     "hyperterm",
     "hyperterm-theme",
-    "chesterish"
-  ],
-  "dependencies": {
-    "lodash.throttle": "^4.0.1"
-  }
+    "chesterish",
+    "hyper-chesterish"
+  ]
 }
