@@ -17,11 +17,6 @@ Add `hyper-chesterish` to the plugins array in your `~/.hyper.js` config.
 * [hyper-statusline](https://github.com/henrikdahl/hyper-statusline)
 
 
-## Other Themes
-
-* [hyperterm-base16-ocean-saturated](https://github.com/henrikdahl/hyperterm-base16-ocean-saturated)
-
-
 ## License
 
 MIT © Henrik
