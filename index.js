@@ -38,7 +38,7 @@ exports.decorateConfig = config => {
             ::selection {
                 background: #9198A2 !important;
             }
-            .cursor-node[focus=true] {
+            .cursor-node[focus=true]:not([moving]) {
                 animation: blink 1s ease infinite;
             }
             @keyframes blink {
