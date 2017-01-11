@@ -17,6 +17,11 @@ Add `hyper-chesterish` to the plugins array in your `~/.hyper.js` config.
 * [hyper-statusline](https://github.com/henrikdahl/hyper-statusline)
 
 
+## Other
+
+* [hyper-oceans16](https://github.com/henrikdahl/hyper-oceans16)
+
+
 ## License
 
 MIT © Henrik

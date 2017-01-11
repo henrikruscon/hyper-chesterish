@@ -46,6 +46,9 @@ exports.decorateConfig = config => {
                     opacity: 0;
                 }
             }
+            span {
+                font-weight: normal !important;
+            }
         `,
         css: `
             ${config.css || ''}
