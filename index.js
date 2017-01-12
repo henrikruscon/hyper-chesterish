@@ -38,6 +38,9 @@ exports.decorateConfig = config => {
             ::selection {
                 background: #9198A2 !important;
             }
+            x-screen x-row {
+                font-variant-ligatures: initial;
+            }
             .cursor-node[focus=true]:not([moving]) {
                 animation: blink 1s ease infinite;
             }
