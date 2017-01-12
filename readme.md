@@ -2,8 +2,8 @@
 
 > Chesterish Theme for [Hyper](https://hyper.is) based on [Jupyter](https://github.com/dunovank/jupyter-themes) schemes.
 
-![](screen.png)
-![](screen_tabs.png)
+![hyper-chesterish](https://cloud.githubusercontent.com/assets/1430576/21888813/3c806682-d8c6-11e6-845d-ca903b6823e8.png)
+![hyper-chesterish-tabs](https://cloud.githubusercontent.com/assets/1430576/21888817/3ef51610-d8c6-11e6-85d9-f0eabd1ee5a2.png)
 
 
 ## Install
