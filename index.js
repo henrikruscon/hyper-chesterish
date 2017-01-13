@@ -41,13 +41,11 @@ exports.decorateConfig = config => {
             x-screen x-row {
                 font-variant-ligatures: initial;
             }
-            .cursor-node[focus=true]:not([moving]) {
+            .cursor-node[focus=true]:not([hyper-blink-moving]) {
                 animation: blink 1s ease infinite;
             }
             @keyframes blink {
-                50% {
-                    opacity: 0;
-                }
+                50% { opacity: 0 }
             }
             span {
                 font-weight: normal !important;
