@@ -1,5 +1,5 @@
 // Syntax scheme
-const backgroundColor   = '#293341';
+const backgroundColor   = '#293340';
 const foregroundColor   = '#CDD2E9';
 const cursorColor       = '#2C85F7';
 const borderColor       = '#354253';
