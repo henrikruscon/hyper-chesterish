@@ -19,6 +19,7 @@ Add `hyper-chesterish` to the plugins array in your `~/.hyper.js` config.
 
 ## Other
 
+* [hyper-aurora](https://github.com/henrikdahl/hyper-aurora)
 * [hyper-oceans16](https://github.com/henrikdahl/hyper-oceans16)
 
 
