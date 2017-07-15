@@ -50,6 +50,9 @@ exports.decorateConfig = config => {
             ::selection {
                 background: #9198A2 !important;
             }
+            .splitpane_divider {
+              background-color: rgba(205, 210, 233, 0.5) !important;
+            }
         `
     });
 };
