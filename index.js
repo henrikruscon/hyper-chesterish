@@ -35,10 +35,10 @@ exports.decorateConfig = config => {
         fontFamily: config.fontFamily || '"Fira Code"',
         termCSS: `
             ${config.termCSS || ''}
-            ::selection {
+            .terminal .xterm-selection div {
                 background: #9198A2 !important;
             }
-            x-screen x-row {
+            .xterm-rows > div {
                 font-variant-ligatures: initial;
             }
             span {
@@ -47,7 +47,7 @@ exports.decorateConfig = config => {
         `,
         css: `
             ${config.css || ''}
-            ::selection {
+            .terminal .xterm-selection div {
                 background: #9198A2 !important;
             }
         `
